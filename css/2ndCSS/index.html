@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        .submit1{
+            padding: 20px;
+            margin: 20px;
+            border: 5px solid black;
+
+        }
+        .submit1:hover{
+            background-color: blue;
+        }
+
+        .submit1:active{
+            background-color: yellow;
+        }
+
+        .submit2{
+            margin: 100px;
+            margin-left: 190px;
+            border: 5px dotted red;
+            border-radius: 8px;
+
+        }
+
+        input:focus{
+            border: 3px solid brown;
+        }
+
+        li:first-child{
+            color: aqua;
+        }
+
+        li:last-child{
+            color: blue;
+        }
+
+        /* div p {
+            color: blue;
+        } */
+
+        div > p{
+            color: aquamarine;
+        }
+
+
+       
+
+    </style>
+
+
+</head>
+<body>
+    <h1>Box model</h1>
+    <div class="">
+    <button class="submit1">Submit</button>
+    <button class="submit2">Submit</button>
+    </div>
+
+    <div>
+        <label for="">Submit</label>
+        <input class="input" type="text">
+    </div>
+
+    <ul>
+        <li>Mercury</li>
+        <li>Venus</li>
+        <li>Earth</li>
+        <li>Mars</li>
+    </ul>
+
+    <div>
+        <p>Direct child(Blue & Green)</p>
+        <section>
+            <p>Nested Child(Blue only)</p>
+        </section>
+    </div>
+</body>
+</html>
