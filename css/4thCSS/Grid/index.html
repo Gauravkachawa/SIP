@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container {
+            height: 810px;
+            display: grid;
+            gap: 5px;
+            /* grid-template-columns: 1fr 1fr; */
+            /* grid-template-columns: 1fr 1fr 1fr; */
+            /* grid-template-rows: repeat(3 1fr); */
+            grid-template-areas: " left-content middle middle right"
+                                 " left-content main-content main-content right-content"
+                                  " left-content main-content main-content right-content"
+                                 "footer footer footer footer";
+                                 
+        }
+
+
+        .item {
+            border: 2px solid black;
+            border-radius: 10px;
+             display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            
+
+        }
+
+        .item1 {
+            background-color: aqua;
+            grid-area: right;
+            transition: transform 1s ease-in-out;
+            
+           
+           
+
+        }
+
+        .item1:hover{
+            background-color: rgb(192, 192, 223);
+            
+            transform: scale(1.05) rotateZ(180deg);
+        }
+
+        .item2 {
+            background-color: bisque;
+            grid-area: middle;
+            
+            
+           
+        }
+
+        .item2:hover{
+            background-color: red;
+        }
+
+        .item3 {
+            background-color: blueviolet;
+            grid-area: left-content;
+            
+            
+
+        }
+
+        .item3:hover{
+            background-color: crimson;
+        }
+
+        .item4 {
+            background-color: chartreuse;
+            grid-area: right-content;
+            
+           
+        }
+        .item4:hover{
+            background-color: darkgreen;
+        }
+
+        .item5 {
+            background-color: tomato;
+            grid-area: footer;
+            height: 100px;
+        }
+
+        .item5:hover{
+            background-color: thistle;
+        }
+        .item6{
+            background-color: cadetblue;
+            grid-area: main-content;
+        }
+
+        .item6:hover{
+            background-color: darkgreen;
+        }
+
+        @media (max-width: 768px){
+            .container{
+                
+                grid-template-areas: "right"
+                                     "middle"
+                                     "left-content"
+                                     "right-content"
+                                     "main-content"
+                                     "footer";
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item item1">Box 1</div>
+        <div class="item item2">Box 2</div>
+        <div class="item item3">Box 3</div>
+        <div class="item item4">Box 4</div>
+        <div class="item item5">Box 5</div>
+        <div class="item item6">Box 6</div>
+    </div>
+</body>
+
+</html>
