@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medium Navbar</title>
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 16px;
+      border-bottom: 1px solid #f0f0f0;
+      background: #fff;
+      font-family: Arial, sans-serif;
+      position: fixed;
+      width: 100vw;
+      box-shadow: 2px 2px 2px grey;
+    }
+
+    .nav-left,
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .menu-btn {
+      background: none;
+      border: none;
+      font-size: 18px;
+      cursor: pointer;
+      color: #6b6b6b;
+      padding-left: 5px;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 700;
+      font-family: Georgia, serif;
+      color: #000;
+      padding-left: 12px;
+    }
+
+    .search-box {
+      display: flex;
+      align-items: center;
+      background: #faeaea;
+      border-radius: 20px;
+      padding: 6px 12px;
+      gap: 6px;
+
+    }
+
+    .search-box input {
+      border: none;
+      background: none;
+      outline: none;
+      font-size: 13px;
+      width: 140px;
+
+
+    }
+
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      text-decoration: none;
+      color: #6b6b6b;
+      font-size: 13px;
+      padding-right: 40px;
+    }
+
+    .get-app {
+      background: #191919;
+      color: #fff;
+      padding: 6px 12px;
+      border-radius: 20px;
+      padding-right: 20px;
+    }
+
+    .profile-btn {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #ffc017;
+      border: none;
+      font-weight: 600;
+      font-size: 13px;
+      color: #000;
+
+    }
+
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      position: fixed;
+      margin-top: 15px;
+      width: 250px;
+      box-shadow: 2px 2px 2px grey;
+      top: 37px;
+
+
+
+
+    }
+
+    .item {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      padding: 18px;
+      /* margin: 0px;
+      padding: 0px;
+      margin: 25px; */
+      font-size: 18px;
+      color: #6b6b6b;
+      font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+
+
+    .item a {
+      text-decoration: none;
+      color: #6b6b6b;
+
+    }
+
+    .item a:hover {
+      color: #191919;
+    }
+    
+    /* .item a:active{
+      zoom: normal;
+    } */
+
+
+
+    .item i {
+      font-size: 20px;
+      width: 24px;
+
+
+
+    }
+
+    .main-content {
+      /* position: fixed; */
+      /* margin: 40px; */
+      
+      padding: 69px;
+      padding-left: 300px;
+    }
+
+    .tabs {
+      display: flex;
+      gap: 60px;
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 30px;
+    }
+
+    
+
+    .tabs button {
+      background: none;
+      border: none;
+      font-size: 15px;
+      color: #6b6b6b;
+      padding-bottom: 15px;
+
+
+    }
+
+    .tabs button:hover{
+      
+      color: black;
+    }
+
+    .card {
+      display: flex;
+      justify-content: space-between;
+
+      border-bottom: 1px solid #beabab;
+      box-shadow: 2px 2px 2px   grey;
+
+      
+      
+      /* padding:35px ; */
+    }
+
+    .card-content {
+      width: 70%;
+    }
+
+    .thumbnail {
+      height: 150px;
+      width: 150px;
+    }
+
+    .pofi{
+      height: 30px;
+    }
+
+    .author{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:15px;
+}
+
+  
+  </style>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="nav-left">
+      <button class="menu-btn">☰</button>
+      <div class="logo">Medium</div>
+      <div class="search-box">
+        <span>🔍</span>
+        <input type="text" placeholder="Search">
+      </div>
+    </div>
+
+    <div class="nav-right">
+      <a href="#" class="nav-link get-app">
+        <span>▦</span> Get app
+      </a>
+      <a href="#" class="nav-link write">
+        <span>✎</span> Write
+      </a>
+      <button class="profile-btn">P</button>
+    </div>
+  </nav>
+
+
+
+
+
+  <div class="container">
+    <div class="sidebar">
+      <div class="item">
+        <i class="fa-solid fa-house"></i>
+        <a href="">Home</a>
+      </div>
+
+      <div class="item">
+        <i class="fa-regular fa-bookmark"></i>
+        <a href="">Library</a>
+      </div>
+
+      <div class="item">
+        <i class="fa-regular fa-circle-user"></i>
+        <a href="">Profile</a>
+      </div>
+
+      <div class="item">
+        <i class="fa-regular fa-file-lines"></i>
+        <a href="">Stories</a>
+      </div>
+
+      <div class="item">
+        <i class="fa-solid fa-chart-column"></i>
+        <a href="">Stats</a>
+      </div>
+
+
+    </div>
+
+    <div class="main-content">
+      <div class="sideplans">
+        <div class="tabs">
+          <button>For you</button>
+          <button>Featured</button>
+        </div>
+        <div class="card">
+          <div class="card-content">
+            <div class="author">
+              <img class="pofi" src="samiran in lift.jpeg">
+              <span>Samiran · Mar 2</span>
+            </div>
+
+            <h2>Everyone wants Vitamin B12</h2>
+
+            <p>No need to do anything just eat fish and sleep</p>
+            <div class="stats">
+              ⭐ 5.3K 💬 158 🔁 90
+            </div>
+          </div>
+
+          <img class="thumbnail" src="samiran eating.jpeg">
+        </div>
+
+        <div class="card">
+          <div class="card-content">
+            <div class="author">
+              <img class="pofi" src="samiran in lift.jpeg">
+              <span>Samiran · Mar 2</span>
+            </div>
+
+            <h2>Everyone wants Vitamin B12</h2>
+
+            <p>No need to do anything just eat fish and sleep</p>
+            <div class="stats">
+              ⭐ 5.3K 💬 158 🔁 90
+            </div>
+          </div>
+
+          <img class="thumbnail" src="samiran eating.jpeg">
+        </div>
+
+
+
+      </div>
+    </div>
+
+
+  </div>
+
+
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform</title>
+
+    <style>
+        .container {
+            display: grid;
+            gap: 10px;
+            transition: transform 5s ease-in;
+
+        }
+
+        .container:hover {
+            transform: translate(600px);
+            transition-duration: 5s;
+        }
+
+        .item {
+            border: 2px solid black;
+            height: 100px;
+            width: 100px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+
+        .car {
+            transition: transform 4s ease-in-out;
+        }
+
+        .container:hover .car {
+            transform: translateX(700px);
+        }
+
+
+        .car:hover {
+            transform: translate(600px);
+            transition-duration: 5s;
+        }
+
+        .item1 {
+            
+            transition: transform 3s ease-in;
+        }
+        .car1{
+            height: 100px;
+        }
+
+        .container:hover .item1 {
+            transform: translateX(500px);
+        }
+
+        .item1:hover {
+            transform: translateX(400px);
+            transition-duration: 2s;
+        }
+
+        .item2 {
+            transition: transform 4s ease-out;
+        }
+
+        .container:hover .item2 {
+            transform: translateX(800px);
+        }
+
+        .item2:hover {
+            transform: translate(100px);
+        }
+
+        .item3 {
+            transition: transform 5s ease-in-out;
+        }
+
+        .container:hover .item3 {
+            transform: translateX(650px) skewX(20deg);
+        }
+
+
+        .item3:hover {
+            transform: skewX(45deg);
+
+        }
+
+        .item4 {
+            transition: transform 6s ease-in-out;
+        }
+
+        .container:hover .item4 {
+            transform: translateX(900px) rotate(720deg);
+        }
+
+        .item4:hover {
+            transform: rotate(1000deg);
+        }
+
+        .item5 {
+            transition: transform 2.5s ease-in-out;
+        }
+
+        .container:hover .item5 {
+            transform: translateX(1100px) scale(1.2);
+            
+        }
+
+        .item5:hover {
+            transform: translate(100px) rotate(45deg) scale(1.5);
+            transition-duration: 2s;
+           
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div><img src="carr.jpg" alt="" class="car car1"></div>
+        <div class="item item1"><img src="1stcar.webp" alt="" class="car1"> </div>
+        <div class="item item2">item2</div>
+        <div class="item item3">item3</div>
+        <div class="item item4">item4</div>
+        <div class="item item5">item5</div>
+    </div>
+</body>
+
+</html>
