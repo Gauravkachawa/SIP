@@ -14,6 +14,7 @@ console.log(Yashwant);
 
 
 // Block Scope and global scope in javascript
+// let and const are block scope and var is a global scope
 
 let a =80;
 console.log(a);
@@ -34,6 +35,7 @@ console.log(c);
 
     const c = 75;
     console.log(c)
+
 }
 
 console.log(a)
