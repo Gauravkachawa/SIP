@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+      body {
+      font-family: Arial, sans-serif;
+      
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      margin: 0;
+      padding-top: 60px;
+    }
+
+    .box {
+      background: #fff;
+      padding: 24px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+      width: 420px;
+    }
+
+     .inp {
+      width: 40%;
+      padding: 12px 14px;
+      border: 1px solid #d1d5db;
+      border-radius: 10px;
+      outline: none;
+      font-size: 16px;
+     }
+
+     .btn {
+        padding: 12px 18px;
+        border-radius: 10px;
+        color: white;
+        font-size: 16px;
+        background: blue;
+        margin-left: 18px;
+     }
+     
+     .taskList {
+        margin-top: 20px;
+        padding: 0;
+     }
+
+     .taskName {
+        
+     }
+
+
+
+
+
+
+
+
+    
+
+
+   
+
+</style>
+<body>
+
+     <input type="text" class="inp" placeholder="Enter Your Daily task">
+    <button class="btn">Add</button>
+
+    <ul class="taskList">
+        
+        
+    </ul>
+    
+
+ 
+
+    <script>
+        const inp = document.querySelector('.inp');
+        console.log(inp)
+        const btn = document.querySelector('.btn')
+        // console.log(btn)
+
+        const taskList = document.querySelector('.taskList')
+
+        btn.addEventListener('click', () => {
+            console.log(inp.value)
+            let task = inp.value
+            let li = document.createElement('li')    // USed for creating list
+            // console.log(li.innerHTML)
+            li.classList.add('taskName')      //For adding class in the list
+            li.innerHTML = `${task}
+             <span>
+             <button class = "up">⬆️</button>
+             <button class = "down">⬇️</button>
+             <button class = "Cross">❌</button>
+             </span>`
+             taskList.appendChild(li);
+
+             li.style.listStyle = 'none'
+             inp.value = ''
+
+             taskList.addEventListener('click', (e) => {
+                console.log(e.target)
+                let list = e.target;
+                if(list.classList.contains('up')){
+                    let parentElement = list.parentElement.parentElement;
+                    console.log(parentElement);
+                    let previousElement = parentElement.previousElementSibling;
+                    console.log(previousElement);
+                    
+                        taskList.insertBefore(parentElement, previousElement)
+                    
+                    
+                }
+                else if (list.classList.contains('down')){
+                    let parentElement = list.parentElement.parentElement;
+                    console.log(parentElement);
+                    let nextElement = parentElement.nextElementSibling;
+                    console.log(previousElement);
+                    
+                        taskList.insertBefore(parentElement, nextElement);
+
+                    
+                    
+                }
+
+                else if (list.classList.contains('Cross')){
+                    let parentElement = list.parentElement.parentElement;
+                    console.log(parentElement);
+                    parentElement.remove();
+                }
+             })
+             
+        })
+    </script>
+</body>
+</html>

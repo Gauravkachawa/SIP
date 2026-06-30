@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #eef2ff, #fce7f3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+     .box {
+      background: wheat;
+      padding: 30px 40px;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 50px 50px rgba(0, 0, 0, 0.12);
+      width: 300px;
+    }
+
+    .yes {
+      background: #22c55e;
+      color: white;
+    }
+
+    .no {
+      background: red;
+      color: white;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    <button class="yes">Click</button>
+    <h2>0</h2>
+    <button class="no">Don't click</button>
+    <!-- <div class="msg">Can't be less than zero</div> -->
+  </div>
+
+  <script>
+    const yes = document.querySelector('.yes');
+    const cnt = document.querySelector('h2');
+    const no = document.querySelector('.no');
+    const msg = document.querySelector('.msg');
+
+    yes.addEventListener('click', () => {
+      cnt.innerHTML = Number(cnt.innerHTML) + 1;
+      msg.classList.remove('show');
+    });
+
+    no.addEventListener('click', () => {
+      const value = Number(cnt.innerHTML) - 1;
+
+      if (value < 0) {
+        msg.classList.add('show');
+        return;
+      }
+
+      cnt.innerHTML = value;
+      msg.classList.remove('show');
+    });
+  </script>
+
+
+
+</body>
+</html>

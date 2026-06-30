@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="container">
+        <h1>Hello everyone</h1>
+    </div>
+
+    <div class="ok">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora impedit esse deleniti eaque facilis possimus suscipit accusamus saepe provident excepturi harum cupiditate vitae minima ducimus tenetur dolorem, dignissimos quas aut.</p>
+    </div>
+
+    <ul>
+        <li>a</li>
+        <li>b</li>
+        <li>c</li>
+        <li>d</li>
+    </ul>
+
+    <button>Click Me</button>
+
+
+    <script>
+        const a = document.getElementById('container').style.color = 'orange'
+        console.log(a)
+
+        const b = document.querySelector('.ok')
+        console.log(b)
+        
+        b.style.color = 'gold'
+
+
+        
+        const c = document.querySelectorAll('li')
+        c.forEach(element => {
+            console.log(element)
+            element.style.color = 'blue'
+            element.style.listStyle = 'none'
+            element.style.fontSize = '100px'
+            
+        });
+
+        const btn = document.querySelector('button')
+         btn.ondblclick = () => {
+            
+            console.log("Submit ho gaya")
+        }
+
+        btn.style.color = 'red'
+        btn.style.backgroundColor = 'yellow'
+        btn.style.borderRadius = '20px'
+
+        btn.addEventListener('click', () => {
+            window.location.href = 'hii.html'
+            console.log("Bas kar")
+
+        })
+
+
+
+
+
+    </script>
+
+
+</body>
+</html>

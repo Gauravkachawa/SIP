@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <h1>Hello</h1>
+    </div>
+
+    <div class="ok">
+        <p>My dear friends</p>
+    </div>
+
+    <ul>
+        <li>a</li>
+        <li>b</li>
+        <li>c</li>
+        <li>d</li>
+    </ul>
+
+
+
+
+    <script>
+        const a = document.getElementById('container').style.color = 'orange'
+        console.log(a)
+
+        const b = document.querySelector('.ok')
+        console.log(b)
+        
+        b.style.color = 'gold'
+
+
+        const c = document.querySelectorAll('li')
+        c.forEach(element => {
+            console.log(element)
+            element.style.color = 'blue'
+            element.style.listStyle = 'none'
+            element.style.backgroundColor = 'red'
+            element.style.fontSize = '100px'
+            
+        });
+    </script>
+</body>
+</html>
