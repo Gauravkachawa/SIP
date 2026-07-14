@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Login</h1>
+
+    <form>
+
+        <label for="">Email</label>
+        <input type="text" id="loginEmail" placeholder="Enter your Email" required><br>
+         <label for="">Password</label>
+        <input type="password" id="loginPassword" placeholder="Enter password" required> <br>
+
+        
+        <button>Login</button>
+   
+    </form>
+
+    <script>
+
+    const form = document.querySelector('form');
+
+form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    try {
+        const email = document.getElementById('loginEmail').value;
+        const pass = document.getElementById('loginPassword').value;
+        
+       
+        let users = JSON.parse(localStorage.getItem('allUsers')) || [];
+        let status = false;
+
+        
+        users.forEach(user => {
+            if (user.email === email && user.password === pass) {
+                status = true;
+            }
+        });
+
+        if (status) {
+            alert('Logged In!');
+            window.location.href = 'main.html';
+        } else {
+            alert('Invalid user');
+        }
+    } catch (err) {
+        console.log(err);
+    }
+});
+
+</script>
+
+</body>
+</html>

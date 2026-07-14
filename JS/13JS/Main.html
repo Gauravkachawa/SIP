@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* body {
+        background-color: #f3f4f6;
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        `
+        
+    } */
+
+    .heading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #0D0208;
+        color: #00FF41;
+        text-shadow: 0 0 8px #008F11;
+    }
+
+
+
+
+
+
+
+    .card1 {
+        background-color: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        overflow: hidden;
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card1:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+
+    .todo {
+        width: 100%;
+        height: 200px;
+    }
+
+    .list {
+        display: block;
+        text-align: center;
+        background-color: #2563eb;
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 600;
+        padding: 12px;
+        margin: 16px;
+        border-radius: 6px;
+        transition: background-color 0.2s ease;
+    }
+
+    .list:hover {
+        background-color: #1d4ed8;
+    }
+
+    .card2 {
+        background-color: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        overflow: hidden;
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card2:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+
+    .BMI {
+        width: 100%;
+        height: 200px;
+    }
+
+    .bmi {
+        display: block;
+        text-align: center;
+        background-color: #2563eb;
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 600;
+        padding: 12px;
+        margin: 16px;
+        border-radius: 6px;
+        transition: background-color 0.2s ease;
+    }
+
+    .bmi:hover {
+        background-color: #1d4ed8;
+    }
+</style>
+
+<body>
+
+    <h1 class="heading">
+        Welcome!You Escaped the Matrix
+    </h1>
+
+    <div class="card1">
+        <img class="todo" src="todo.jpg" alt="">
+        <p>A to-do list is an organized record of tasks you need to complete or goals you want to achieve</p>
+        <a class="list" href="todo.html">TO DO List</a>
+    </div>
+
+    <div class="card2">
+        <img class="BMI" src="bmi.png" alt="">
+        <p> Body Mass Index calculator gives out the BMI value and categorizes BMI based on provided information from
+            WHO and CDC for both adults and children.</p>
+        <a class="bmi" href="bmi.html">BMI Calculator</a>
+    </div>
+
+
+</body>
+
+</html>

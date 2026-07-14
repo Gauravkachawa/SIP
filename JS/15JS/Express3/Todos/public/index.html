@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+ 
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Todo app</h1>
+
+    
+    <input type="text" class="inp" placeholder="Enter your task" name="task">
+    <button>Add task</button>
+    <ul class="taskList">
+        <!-- <li class="taskName"></li> -->
+    </ul>
+    
+
+    <script>
+
+        const inp = document.querySelector('.inp');
+        const btn = document.querySelector('button');
+        const list = document.querySelector('.taskList')
+
+       
+
+            function updateTodo(data){
+            list.innerHTML = "";
+            
+            data.forEach(element => {
+                let li = document.createElement('li')
+                li.classList.add('taskName')
+                // li.textContent = element
+                li.innerHTML = ` <span class = "pan">${element}
+             <button class = "up">⬆️</button>
+             <button class = "down">⬇️</button>
+             <button class = "Cross">❌</button>
+             </span>`
+
+             list.appendChild(li)
+             li.style.listStyle = 'none'
+             inp.value = ''
+            });
+
+        }
+            btn.addEventListener('click', async(e)=>{
+            let task = inp.value
+            let {data} = await axios.get(`/addtask?work=${task}`)
+            console.log(data);
+            updateTodo(data)
+    })
+
+    async function loadData() {
+        try{
+            let data = await axios.get(`/todos`)
+            updateTodo(data)
+        }
+        catch ({error}){
+            console.log(error)
+            
+        }
+        
+    }
+    loadData();
+
+    list.addEventListener('click', async (e) =>{
+        console.log(e.target);
+        let btns = e.target;
+        if(btns.classList.contains('up')){
+            console.log(btns.parentElement.previousElementSibling)
+            let {data} = await axios.get(`/increase?work=${btns.parentElement.previousElementSibling.innerText}`)
+            updateTodo(data);
+        }
+        
+    })
+
+    </script>
+</body>
+</html>
